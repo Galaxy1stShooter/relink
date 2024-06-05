@@ -1,0 +1,78 @@
+<launch>
+    <arg name="radius_comm"/>
+    <arg name="target_number"/>
+    <param name="target_number" value="$(arg target_number)"/>
+
+    <!-- <group ns="car0">
+        <arg name="uav_id" default="0"/>
+        <param name="uav_id"   value="$(arg uav_id)"/>
+        <param name="init_x"     value="-10.0"/>
+        <param name="init_y"     value="0.0"/>
+        <param name="init_z"     value="0.0"/>
+    </group>
+
+    <group ns="car1">
+        <arg name="uav_id" default="1"/>
+        <param name="uav_id"   value="$(arg uav_id)"/>
+        <param name="init_x"     value="10.0"/>
+        <param name="init_y"     value="0.0"/>
+        <param name="init_z"     value="0.0"/>
+    </group>
+
+    <group ns="car2">
+        <arg name="uav_id" default="2"/>
+        <param name="uav_id"   value="$(arg uav_id)"/>
+        <param name="init_x"     value="0.0"/>
+        <param name="init_y"     value="10.0"/>
+        <param name="init_z"     value="0.0"/>
+    </group>
+
+    <group ns="car3">
+        <arg name="uav_id" default="3"/>
+        <param name="uav_id"   value="$(arg uav_id)"/>
+        <param name="init_x"     value="0.0"/>
+        <param name="init_y"     value="-10.0"/>
+        <param name="init_z"     value="0.0"/>
+    </group> -->
+
+    <group ns="car0">
+        <arg name="uav_id" default="0"/>
+        <param name="uav_id"   value="$(arg uav_id)"/>
+        <param name="init_x"     value="-10.0"/>
+        <param name="init_y"     value="10.0"/>
+        <param name="init_z"     value="0.0"/>
+    </group>
+
+    <group ns="car1">
+        <arg name="uav_id" default="1"/>
+        <param name="uav_id"   value="$(arg uav_id)"/>
+        <param name="init_x"     value="10.0"/>
+        <param name="init_y"     value="10.0"/>
+        <param name="init_z"     value="0.0"/>
+    </group>
+
+    <group ns="car2">
+        <arg name="uav_id" default="2"/>
+        <param name="uav_id"   value="$(arg uav_id)"/>
+        <param name="init_x"     value="10.0"/>
+        <param name="init_y"     value="-10.0"/>
+        <param name="init_z"     value="0.0"/>
+    </group>
+
+    <group ns="car3">
+        <arg name="uav_id" default="3"/>
+        <param name="uav_id"   value="$(arg uav_id)"/>
+        <param name="init_x"     value="-10.0"/>
+        <param name="init_y"     value="-10.0"/>
+        <param name="init_z"     value="0.0"/>
+    </group>
+
+    <node name="record_car" pkg="simulator" type="record_car"  output="screen">
+        
+    </node>
+
+    <include file="$(find simulator)/launch/entity_controller.launch">
+        <arg name="radius_comm" value="$(arg radius_comm)"/>
+        <arg name="target_number" value="$(arg target_number)"/>
+    </include>
+</launch>

@@ -1,0 +1,14 @@
+<launch>
+    <arg name="inflated_global_map" default="/map_generator/global_cloud"/>
+    <param name="/available_uav_num" value="6"/>
+
+    <node pkg="simulator" name="measurement_calculator" type="measurement_calculator" output="screen">
+        <remap from="~target_pos" to="target_pos"/>
+        <remap from="~target_waypoint" to="target_waypoint"/>
+        <remap from="~uav_pos" to="uav_pos"/>
+        <remap from="~bs_pos" to="bs_pos"/>
+        <remap from="~solution" to="solution"/>
+    </node>
+
+</launch>
+    

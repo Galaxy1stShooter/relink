@@ -1,0 +1,8 @@
+prefix=/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/cmake-build-debug/devel
+
+Name: visualization
+Description: Description of visualization
+Version: 0.0.0
+Cflags: -I/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/visualization/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs nav_msgs message_files roscpp std_msgs sensor_msgs optimizer

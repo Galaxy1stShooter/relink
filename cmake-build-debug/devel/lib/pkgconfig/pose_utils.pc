@@ -1,0 +1,8 @@
+prefix=/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/cmake-build-debug/devel
+
+Name: pose_utils
+Description: Description of pose_utils
+Version: 0.0.0
+Cflags: -I/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/Utils/uav_simulator/Utils/pose_utils/include
+Libs: -L${prefix}/lib -lpose_utils
+Requires: 

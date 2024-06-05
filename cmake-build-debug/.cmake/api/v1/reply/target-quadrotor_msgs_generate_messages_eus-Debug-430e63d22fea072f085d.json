@@ -1,0 +1,338 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"include",
+			"generate_messages",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"cmake-build-debug/Utils/uav_simulator/Utils/quadrotor_msgs/cmake/quadrotor_msgs-genmsg.cmake",
+			"/opt/ros/melodic/share/genmsg/cmake/genmsg-extras.cmake",
+			"Utils/uav_simulator/Utils/quadrotor_msgs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 79,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 307,
+				"parent" : 1
+			},
+			{
+				"file" : 0,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 307,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 761,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 758,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 314,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 316,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 318,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 320,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 322,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 324,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 326,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 328,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 330,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 332,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 334,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 336,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 338,
+				"parent" : 3
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "nav_msgs_generate_messages_eus::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "geometry_msgs_generate_messages_eus::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_PPROutputData::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_PositionCommand::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_AuxCommand::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_OutputData::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_Gains::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_TRPYCommand::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_PolynomialTrajectory::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 14,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_Serial::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 15,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_LQRTrajectory::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 16,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_Corrections::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 17,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_StatusData::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 18,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_SO3Command::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_Odometry::@c4b1adf76188acbdf28f"
+		}
+	],
+	"id" : "quadrotor_msgs_generate_messages_eus::@c4b1adf76188acbdf28f",
+	"name" : "quadrotor_msgs_generate_messages_eus",
+	"paths" : 
+	{
+		"build" : "Utils/uav_simulator/Utils/quadrotor_msgs",
+		"source" : "Utils/uav_simulator/Utils/quadrotor_msgs"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/Utils/uav_simulator/Utils/quadrotor_msgs/CMakeFiles/quadrotor_msgs_generate_messages_eus",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/Utils/uav_simulator/Utils/quadrotor_msgs/CMakeFiles/quadrotor_msgs_generate_messages_eus.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/share/roseus/ros/quadrotor_msgs/manifest.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/share/roseus/ros/quadrotor_msgs/msg/AuxCommand.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/share/roseus/ros/quadrotor_msgs/msg/Corrections.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/share/roseus/ros/quadrotor_msgs/msg/Gains.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/share/roseus/ros/quadrotor_msgs/msg/LQRTrajectory.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/share/roseus/ros/quadrotor_msgs/msg/Odometry.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/share/roseus/ros/quadrotor_msgs/msg/OutputData.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/share/roseus/ros/quadrotor_msgs/msg/PPROutputData.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/share/roseus/ros/quadrotor_msgs/msg/PolynomialTrajectory.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/share/roseus/ros/quadrotor_msgs/msg/PositionCommand.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/share/roseus/ros/quadrotor_msgs/msg/SO3Command.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/share/roseus/ros/quadrotor_msgs/msg/Serial.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/share/roseus/ros/quadrotor_msgs/msg/StatusData.l.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/share/roseus/ros/quadrotor_msgs/msg/TRPYCommand.l.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

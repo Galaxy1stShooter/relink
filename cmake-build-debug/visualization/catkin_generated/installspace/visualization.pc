@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: visualization
+Description: Description of visualization
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs nav_msgs message_files roscpp std_msgs sensor_msgs optimizer

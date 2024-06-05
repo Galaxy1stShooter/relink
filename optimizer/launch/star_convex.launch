@@ -1,0 +1,20 @@
+<launch>
+    <arg name="ball_radius_multiplier"/>
+
+    <node pkg="optimizer" name="star_convex" type="star_convex" output="screen">
+        <remap from="~target_pos" to="target_pos"/>
+        <remap from="~target_waypoint" to="target_waypoint"/>
+        <remap from="~uav_pos" to="uav_pos"/>
+        <remap from="~bs_pos" to="bs_pos"/>
+        <remap from="~solution" to="solution"/>
+        <!--The radius of ball flipping = radius_comm * ball_radius_multiplier-->
+        <param name="ball_radius_multiplier" value="$(arg ball_radius_multiplier)" type="double"/>
+        <!--The count of sampled augmented points = r^2 * augment_multiplier-->
+        <param name="augment_multiplier" value="3" type="int"/>
+        <!--If true, visualize the flipped convex hull, not scp-->
+        <param name="show_flipped_hull" value="false" type="bool"/>
+        <!--The voxel size used for pcl down-sampling, of metre-->
+        <param name="down_sampling_size" value="0.3" type="double"/>
+    </node>
+
+</launch>

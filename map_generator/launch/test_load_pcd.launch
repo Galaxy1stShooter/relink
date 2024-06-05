@@ -1,0 +1,15 @@
+<launch>
+    <node pkg ="map_generator" name ="test_load_pcd" type ="test_load_pcd" output = "screen">
+        <!-- <param name="x_translate" value="-9685.0"/>
+        <param name="y_translate" value="-713.0"/>
+        <param name="z_translate" value="31.0"/> -->
+        <!-- <param name="x_translate" value="-25.0"/> -->
+        <!-- <param name="y_translate" value="-25.0"/> -->
+        <param name="z_translate" value="0.0"/>
+        <!-- <param name="x_rotate" value="0.0"/>
+        <param name="y_rotate" value="0.0"/>
+        <param name="z_rotate" value="0.047996554"/> -->
+        <param name="scale" value="0.4"/>
+    </node>
+
+</launch>

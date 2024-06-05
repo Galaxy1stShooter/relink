@@ -1,0 +1,8 @@
+prefix=/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/cmake-build-debug/devel
+
+Name: simulator
+Description: Description of simulator
+Version: 0.0.0
+Cflags: -I/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/simulator/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs message_runtime

@@ -1,0 +1,260 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"include",
+			"generate_messages",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"cmake-build-debug/message_files/cmake/message_files-genmsg.cmake",
+			"/opt/ros/melodic/share/genmsg/cmake/genmsg-extras.cmake",
+			"message_files/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 307,
+				"parent" : 1
+			},
+			{
+				"file" : 0,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 479,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 576,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 579,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 486,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 488,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 490,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 492,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 494,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 496,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 498,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 500,
+				"parent" : 3
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "std_msgs_generate_messages_py::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "geometry_msgs_generate_messages_py::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "_message_files_generate_messages_check_deps_StarConvexPolytope::@e05a0243be0135112f9f"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "_message_files_generate_messages_check_deps_Optimize::@e05a0243be0135112f9f"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "_message_files_generate_messages_check_deps_PoseStampedArray::@e05a0243be0135112f9f"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "_message_files_generate_messages_check_deps_SteinerTreeNode::@e05a0243be0135112f9f"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "_message_files_generate_messages_check_deps_Assign::@e05a0243be0135112f9f"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "_message_files_generate_messages_check_deps_StarConvexPolytopesStamped::@e05a0243be0135112f9f"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "_message_files_generate_messages_check_deps_SteinerTreeArray::@e05a0243be0135112f9f"
+		},
+		{
+			"backtrace" : 14,
+			"id" : "_message_files_generate_messages_check_deps_PolygonArrayStamped::@e05a0243be0135112f9f"
+		}
+	],
+	"id" : "message_files_generate_messages_py::@e05a0243be0135112f9f",
+	"name" : "message_files_generate_messages_py",
+	"paths" : 
+	{
+		"build" : "message_files",
+		"source" : "message_files"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/message_files/CMakeFiles/message_files_generate_messages_py",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/message_files/CMakeFiles/message_files_generate_messages_py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/message_files/msg/_PolygonArrayStamped.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/message_files/msg/_PoseStampedArray.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/message_files/msg/_StarConvexPolytope.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/message_files/msg/_StarConvexPolytopesStamped.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/message_files/msg/_SteinerTreeArray.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/message_files/msg/_SteinerTreeNode.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/message_files/msg/__init__.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/message_files/srv/_Assign.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/message_files/srv/_Optimize.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/message_files/srv/__init__.py.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

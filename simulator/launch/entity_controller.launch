@@ -1,0 +1,24 @@
+<launch>
+    <arg name="target_number"/>
+    <arg name="inflated_global_map"/>
+
+    <node pkg="simulator" name="entity_controller" type="entity_controller" output="screen">
+        <remap from="~target_pos" to="target_pos"/>
+        <remap from="~target_waypoint" to="target_waypoint"/>
+        <remap from="~uav_pos" to="uav_pos"/>
+        <remap from="~bs_pos" to="bs_pos"/>
+
+        <remap from="/global_map" to="$(arg inflated_global_map)"/>
+
+        <param name="target_number" value="$(arg target_number)"/>
+
+        <!-- Whether base stations are random. Similar to UAV part -->
+        <param name="bs_random" value="false" type="bool"/>
+        <param name="max_bs_num" value="5" type="int"/>
+        <param name="bs_num" value="1" type="int"/>
+        <param name="bs0_x" value="-2.5" type="double"/>
+        <param name="bs0_y" value="-22.5" type="double"/>
+        <param name="bs0_z" value="7.5" type="double"/>
+    </node>
+
+</launch>

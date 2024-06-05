@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/melodies/SYSU_ROBOT/Fast-Planner/uav_simulator/map_generator/cmake-build-debug/devel/setup.sh

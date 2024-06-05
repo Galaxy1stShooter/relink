@@ -1,0 +1,2 @@
+set(tuw_multi_robot_msgs_MESSAGE_FILES "msg/RobotGoals.msg;msg/RobotGoalsArray.msg;msg/RoutePrecondition.msg;msg/RouteSegment.msg;msg/Route.msg;msg/RouterStatus.msg;msg/Vertex.msg;msg/Graph.msg;msg/RobotInfo.msg;msg/Order.msg;msg/OrderArray.msg;msg/Pickup.msg;msg/OrderPosition.msg;msg/Station.msg;msg/StationArray.msg;msg/RouteProgress.msg")
+set(tuw_multi_robot_msgs_SERVICE_FILES "srv/StationManagerControlProtocol.srv;srv/StationManagerStationProtocol.srv")

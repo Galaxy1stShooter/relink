@@ -1,0 +1,8 @@
+prefix=/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/cmake-build-debug/devel
+
+Name: uav_utils
+Description: Description of uav_utils
+Version: 0.0.0
+Cflags: -I/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/Utils/uav_simulator/Utils/uav_utils/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy

@@ -1,0 +1,109 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"include",
+			"generate_messages",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"cmake-build-debug/Utils/uav_simulator/Utils/quadrotor_msgs/cmake/quadrotor_msgs-genmsg.cmake",
+			"/opt/ros/melodic/share/genmsg/cmake/genmsg-extras.cmake",
+			"Utils/uav_simulator/Utils/quadrotor_msgs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 79,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 307,
+				"parent" : 1
+			},
+			{
+				"file" : 0,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 14,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 181,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 310,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 439,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 568,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 697,
+				"parent" : 3
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "quadrotor_msgs_generate_messages_cpp::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "quadrotor_msgs_generate_messages_eus::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "quadrotor_msgs_generate_messages_lisp::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "quadrotor_msgs_generate_messages_nodejs::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "quadrotor_msgs_generate_messages_py::@c4b1adf76188acbdf28f"
+		}
+	],
+	"id" : "quadrotor_msgs_generate_messages::@c4b1adf76188acbdf28f",
+	"name" : "quadrotor_msgs_generate_messages",
+	"paths" : 
+	{
+		"build" : "Utils/uav_simulator/Utils/quadrotor_msgs",
+		"source" : "Utils/uav_simulator/Utils/quadrotor_msgs"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

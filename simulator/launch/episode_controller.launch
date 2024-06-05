@@ -1,0 +1,9 @@
+<launch>
+    <arg name="inflated_global_map"/>
+
+    <node pkg="simulator" name="episode_controller" type="episode_controller" output="screen">
+        <remap from="/global_map" to="$(arg inflated_global_map)"/>
+        <remap from="~target_waypoint" to="target_waypoint"/>
+    </node>
+
+</launch>

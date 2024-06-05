@@ -1,0 +1,26 @@
+<launch>
+    <arg name="episode_seq"/>
+    <param name="/simulation_seq" value="$(arg episode_seq)" type="int"/>
+
+    <!-- ATTENTION! SYNC these in algorithm.launch visualization.launch -->
+    <arg name="radius_comm" value="15.0" />
+    <arg name="map_size_x" value="50.0"/>
+    <arg name="map_size_y" value="50.0"/>
+    <arg name="map_size_z" value="10.0"/>
+    <arg name="grid_resolution" value="5.0"/>
+    <!-- ATTENTION! SYNC these in algorithm.launch visualization.launch -->
+
+    <include file="$(find plan_manage)/launch/swarm.launch">
+
+    </include>
+
+    <include file="$(find optimizer)/launch/algorithm.launch">
+
+    </include>
+
+<!--    <include file="$(find visualization)/launch/visualization.launch">-->
+
+<!--    </include>-->
+
+
+</launch>

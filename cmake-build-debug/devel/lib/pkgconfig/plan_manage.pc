@@ -1,0 +1,8 @@
+prefix=/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/cmake-build-debug/devel
+
+Name: plan_manage
+Description: Description of plan_manage
+Version: 0.0.0
+Cflags: -I/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/cmake-build-debug/devel/include -I/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/Utils/fast_planner/plan_manage/include
+Libs: -L${prefix}/lib -lplan_manage
+Requires: plan_env path_searching bspline bspline_opt traj_utils message_runtime

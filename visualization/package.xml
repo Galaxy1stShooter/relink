@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<package format="2">
+  <version>0.0.0</version>
+  <name>visualization</name>
+  <description>
+
+    visualization
+
+  </description>
+  <maintainer email="xialj8@outlook.com">Lijia Xia</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>pose_utils</build_depend>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>tf</exec_depend>
+  <exec_depend>pose_utils</exec_depend>
+
+  <build_depend>message_files</build_depend>
+  <exec_depend>message_files</exec_depend>
+  <build_export_depend>message_files</build_export_depend>
+
+  <build_depend>optimizer</build_depend>
+  <exec_depend>optimizer</exec_depend>
+  <build_export_depend>optimizer</build_export_depend>
+
+  <build_depend>std_msgs</build_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+  <build_depend>geometry_msgs</build_depend>
+  <build_export_depend>geometry_msgs</build_export_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+
+  <build_depend>rospy</build_depend>
+  <exec_depend>rospy</exec_depend>
+
+  <build_depend>visualization_containing_custom_msg</build_depend>
+  <exec_depend>visualization_containing_custom_msg</exec_depend>
+
+</package>
+
+

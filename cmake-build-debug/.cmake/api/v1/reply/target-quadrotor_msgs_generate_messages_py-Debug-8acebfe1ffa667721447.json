@@ -1,0 +1,338 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"include",
+			"generate_messages",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"cmake-build-debug/Utils/uav_simulator/Utils/quadrotor_msgs/cmake/quadrotor_msgs-genmsg.cmake",
+			"/opt/ros/melodic/share/genmsg/cmake/genmsg-extras.cmake",
+			"Utils/uav_simulator/Utils/quadrotor_msgs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 79,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 307,
+				"parent" : 1
+			},
+			{
+				"file" : 0,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 694,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 804,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 801,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 701,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 703,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 705,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 707,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 709,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 711,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 713,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 715,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 717,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 719,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 721,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 723,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 725,
+				"parent" : 3
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "nav_msgs_generate_messages_py::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "geometry_msgs_generate_messages_py::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_PPROutputData::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_PositionCommand::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_AuxCommand::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_OutputData::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_Gains::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_TRPYCommand::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_PolynomialTrajectory::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 14,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_Serial::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 15,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_LQRTrajectory::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 16,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_Corrections::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 17,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_StatusData::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 18,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_SO3Command::@c4b1adf76188acbdf28f"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "_quadrotor_msgs_generate_messages_check_deps_Odometry::@c4b1adf76188acbdf28f"
+		}
+	],
+	"id" : "quadrotor_msgs_generate_messages_py::@c4b1adf76188acbdf28f",
+	"name" : "quadrotor_msgs_generate_messages_py",
+	"paths" : 
+	{
+		"build" : "Utils/uav_simulator/Utils/quadrotor_msgs",
+		"source" : "Utils/uav_simulator/Utils/quadrotor_msgs"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/Utils/uav_simulator/Utils/quadrotor_msgs/CMakeFiles/quadrotor_msgs_generate_messages_py",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/Utils/uav_simulator/Utils/quadrotor_msgs/CMakeFiles/quadrotor_msgs_generate_messages_py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/quadrotor_msgs/msg/_AuxCommand.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/quadrotor_msgs/msg/_Corrections.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/quadrotor_msgs/msg/_Gains.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/quadrotor_msgs/msg/_LQRTrajectory.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/quadrotor_msgs/msg/_Odometry.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/quadrotor_msgs/msg/_OutputData.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/quadrotor_msgs/msg/_PPROutputData.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/quadrotor_msgs/msg/_PolynomialTrajectory.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/quadrotor_msgs/msg/_PositionCommand.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/quadrotor_msgs/msg/_SO3Command.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/quadrotor_msgs/msg/_Serial.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/quadrotor_msgs/msg/_StatusData.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/quadrotor_msgs/msg/_TRPYCommand.py.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/devel/lib/python2.7/dist-packages/quadrotor_msgs/msg/__init__.py.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

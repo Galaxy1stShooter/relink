@@ -1,0 +1,4 @@
+geometry_msgs/PointStamped initial_position
+StarConvexPolytopesStamped SCPs
+---
+geometry_msgs/PointStamped position

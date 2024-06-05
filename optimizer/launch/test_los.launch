@@ -1,0 +1,31 @@
+<launch>
+    <rosparam param="use_sim_time">false</rosparam>
+
+    <!-- <arg name="radius_comm" value="6.9284" /> -->
+    <arg name="radius_comm" value="8.0" />
+    <arg name="ball_radius_multiplier" value="10.0" />
+    <arg name="map_size_x" value="20.0"/>
+    <arg name="map_size_y" value="20.0"/>
+    <arg name="map_size_z" value="10.0"/>
+
+    <include file="$(find map_generator)/launch/map_generator.launch">
+        <arg name="map_size_x_" value="$(arg map_size_x)"/>
+        <arg name="map_size_y_" value="$(arg map_size_y)"/>
+        <arg name="map_size_z_" value="$(arg map_size_z)"/>
+        <!-- Number of circle and pillar obstacles -->
+        <arg name="c_num" value="0"/>
+        <arg name="p_num" value="10"/>
+    </include>
+
+    <node pkg="optimizer" name="test_los" type="test_los" output="screen">
+
+        <param name="los_checker/x_size" value="$(arg map_size_x)" type="double"/>
+        <param name="los_checker/y_size" value="$(arg map_size_y)" type="double"/>
+        <param name="los_checker/z_size" value="$(arg map_size_z)" type="double"/>
+        <param name="grid_map/resolution" value="1.0" type="double"/>
+        <param name="grid_map/radius2res" value="4.0" type="double"/>
+
+        <remap from="/global_map" to="/map_generator/global_cloud"/>
+    </node>
+
+</launch>

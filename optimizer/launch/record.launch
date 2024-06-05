@@ -1,0 +1,59 @@
+<launch>
+    <rosparam param="use_sim_time">false</rosparam>
+
+    <arg name="map_size_x" value="20.0"/>
+    <arg name="map_size_y" value="20.0"/>
+    <arg name="map_size_z" value="10.0"/>
+    <arg name="radius_comm" value="8.0" />
+    <arg name="ball_radius_multiplier" value="10.0" />
+    <arg name="target_number" value="4" />
+
+
+    <include file="$(find simulator)/launch/record_car.launch">
+        <arg name="radius_comm" value="$(arg radius_comm)"/>
+        <arg name="target_number" value="$(arg target_number)"/>
+    </include>
+
+    <node pkg="optimizer" name="algorithm" type="algorithm" output="screen">
+        <param name="graph_constructor/x_size" value="$(arg map_size_x)" type="double"/>
+        <param name="graph_constructor/y_size" value="$(arg map_size_y)" type="double"/>
+        <param name="graph_constructor/z_size" value="$(arg map_size_z)" type="double"/>
+        <param name="grid_map/resolution" value="3.0" type="double"/>
+        <param name="grid_map/radius2res" value="2.0" type="double"/>
+
+        <remap from="~target_pos" to="target_pos"/>
+        <remap from="~target_waypoint" to="target_waypoint"/>
+        <remap from="~uav_pos" to="uav_pos"/>
+        <remap from="~bs_pos" to="bs_pos"/>
+        <remap from="~solution" to="solution"/>
+        <!--Determine parameters of star convex calculation and visualization-->
+        <!--The radius of ball flipping = radius_comm * ball_radius_multiplier-->
+        <param name="ball_radius_multiplier" value="$(arg ball_radius_multiplier)" type="double"/>
+        <!--The count of sampled augmented points = r^2 * augment_multiplier-->
+        <param name="augment_multiplier" value="3" type="int"/>
+        <!--If true, visualize the flipped convex hull, not scp-->
+        <param name="show_flipped_hull" value="false" type="bool"/>
+        <!--The voxel size used for pcl down-sampling, of metre-->
+        <param name="down_sampling_size" value="0.3" type="double"/>
+
+        <remap from="/global_map" to="/map_generator/global_cloud"/>
+    </node>
+
+    <include file="$(find simulator)/launch/episode_controller.launch">
+
+    </include>
+
+    <include file="$(find map_generator)/launch/map_generator.launch">
+        <arg name="map_size_x_" value="$(arg map_size_x)"/>
+        <arg name="map_size_y_" value="$(arg map_size_y)"/>
+        <arg name="map_size_z_" value="$(arg map_size_z)"/>
+        <!-- Number of circle and pillar obstacles -->
+        <arg name="c_num" value="0"/>
+        <arg name="p_num" value="10"/>
+    </include>
+
+    <include file="$(find visualization)/launch/visualization.launch">
+
+    </include>
+
+</launch>

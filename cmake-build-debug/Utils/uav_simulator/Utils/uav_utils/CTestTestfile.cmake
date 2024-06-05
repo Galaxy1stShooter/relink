@@ -1,0 +1,8 @@
+# CMake generated Testfile for 
+# Source directory: /home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/Utils/uav_simulator/Utils/uav_utils
+# Build directory: /home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/cmake-build-debug/Utils/uav_simulator/Utils/uav_utils
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test(_ctest_uav_utils_gtest_uav_utils-test "/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/cmake-build-debug/catkin_generated/env_cached.sh" "/usr/bin/python2" "/opt/ros/melodic/share/catkin/cmake/test/run_tests.py" "/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/cmake-build-debug/test_results/uav_utils/gtest-uav_utils-test.xml" "--return-code" "/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/cmake-build-debug/devel/lib/uav_utils/uav_utils-test --gtest_output=xml:/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/cmake-build-debug/test_results/uav_utils/gtest-uav_utils-test.xml")
+set_tests_properties(_ctest_uav_utils_gtest_uav_utils-test PROPERTIES  _BACKTRACE_TRIPLES "/opt/ros/melodic/share/catkin/cmake/test/tests.cmake;160;add_test;/opt/ros/melodic/share/catkin/cmake/test/gtest.cmake;98;catkin_run_tests_target;/opt/ros/melodic/share/catkin/cmake/test/gtest.cmake;37;_catkin_add_google_test;/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/Utils/uav_simulator/Utils/uav_utils/CMakeLists.txt;94;catkin_add_gtest;/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/Utils/uav_simulator/Utils/uav_utils/CMakeLists.txt;0;")

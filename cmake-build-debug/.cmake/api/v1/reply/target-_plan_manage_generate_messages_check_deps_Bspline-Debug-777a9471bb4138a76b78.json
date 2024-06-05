@@ -1,0 +1,86 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"include",
+			"generate_messages"
+		],
+		"files" : 
+		[
+			"cmake-build-debug/Utils/fast_planner/plan_manage/cmake/plan_manage-genmsg.cmake",
+			"/opt/ros/melodic/share/genmsg/cmake/genmsg-extras.cmake",
+			"Utils/fast_planner/plan_manage/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 32,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 307,
+				"parent" : 1
+			},
+			{
+				"file" : 0,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 21,
+				"parent" : 3
+			}
+		]
+	},
+	"id" : "_plan_manage_generate_messages_check_deps_Bspline::@8a4aa3622b6932981cb9",
+	"name" : "_plan_manage_generate_messages_check_deps_Bspline",
+	"paths" : 
+	{
+		"build" : "Utils/fast_planner/plan_manage",
+		"source" : "Utils/fast_planner/plan_manage"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/Utils/fast_planner/plan_manage/CMakeFiles/_plan_manage_generate_messages_check_deps_Bspline",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/Utils/fast_planner/plan_manage/CMakeFiles/_plan_manage_generate_messages_check_deps_Bspline.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

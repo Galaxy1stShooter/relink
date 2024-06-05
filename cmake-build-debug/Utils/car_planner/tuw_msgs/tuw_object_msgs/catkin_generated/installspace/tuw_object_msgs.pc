@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: tuw_object_msgs
+Description: Description of tuw_object_msgs
+Version: 0.0.13
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime std_msgs geometry_msgs

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/cmake-build-debug/devel/setup.sh

@@ -1,0 +1,48 @@
+<launch>
+    <arg name="use_real_map"/>
+    <arg name="read_map"/>
+
+    <arg name="map_size_x_"/>
+    <arg name="map_size_y_"/>
+    <arg name="map_size_z_"/>
+    <arg name="grid_resolution"/>
+    <arg name="c_num"/>
+    <arg name="p_num"/>
+
+    <node pkg ="map_generator" name ="random_forest" type ="random_forest" output = "screen">
+<!--        <remap from="~odometry"   to="$(arg odometry_topic)"/>-->
+<!--        <param name="init_state_x"   value="$(arg uav0_x)"/>-->
+<!--        <param name="init_state_y"   value="$(arg uav0_y)"/>-->
+        <param name="use_real_map" value="$(arg use_real_map)"/>
+        <param name="read_map" value="$(arg read_map)"/>
+
+        <param name="map/x_size"     value="$(arg map_size_x_)" />
+        <param name="map/y_size"     value="$(arg map_size_y_)" />
+        <param name="map/z_size"     value="$(arg map_size_z_)" />
+        <param name="map/resolution" value="0.1"/>
+        <param name="grid_resolution" value="$(arg grid_resolution)"/>
+
+        <param name="gridSize_to_ObstacleWidth" value="0.7"/>
+        <param name="gridSize_to_InflatedWidth" value="0.99"/>
+<!--        <param name="gridSize_to_ObstacleWidth" value="1.4"/>-->
+<!--        <param name="gridSize_to_InflatedWidth" value="1.98"/>-->
+
+        <param name="ObstacleShape/seed" value="-1"/>
+        <param name="map/obs_num"    value="$(arg p_num)"/>
+        <param name="ObstacleShape/lower_rad" value="1.5"/>
+        <param name="ObstacleShape/upper_rad" value="1.7"/>
+        <param name="ObstacleShape/lower_hei" value="0.0"/>
+        <param name="ObstacleShape/upper_hei" value="5.0"/>
+
+        <param name="map/circle_num" value="$(arg c_num)"/>
+        <param name="ObstacleShape/radius_l" value="0.7"/>
+        <param name="ObstacleShape/radius_h" value="0.5"/>
+        <param name="ObstacleShape/z_l" value="0.7"/>
+        <param name="ObstacleShape/z_h" value="0.8"/>
+        <param name="ObstacleShape/theta" value="0.5"/>
+
+        <param name="sensing/radius" value="5.0"/>
+        <param name="sensing/rate"   value="2.0"/>
+    </node>
+
+</launch>

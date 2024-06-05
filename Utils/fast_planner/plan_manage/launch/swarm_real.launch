@@ -1,0 +1,247 @@
+<launch>
+    <!-- Current solution for insufficient UAV number: raise an "ERROR" -->
+    <!-- SYNC in measurement_calculator !-->
+    <param name="/available_uav_num" value="6"/>
+
+    <!-- size of map, change the size in x, y, z according to your application -->
+    <arg name="map_size_x" value="30.0"/>
+    <arg name="map_size_y" value="30.0"/>
+    <arg name="map_size_z" value="10.0"/>
+
+    <!-- topic of your odometry such as VIO or LIO -->
+    <arg name="odom_topic" value="state_ukf/odom" />
+    
+    <!-- topic of initial position array of uavs -->
+    <arg name="initial_pos_topic" value="/init_uav_pos"/>
+
+    <group ns="car0">
+        <arg name="uav_id" default="-1"/>
+
+        <include file="$(find plan_manage)/launch/kino_car/kino_replan_car.launch">
+            <arg name="uav_id"   value="$(arg uav_id)"/>
+
+            <arg name="init_x"     value="12.5"/>
+            <arg name="init_y"     value="-17.5"/>
+            <arg name="init_z"     value="0.0"/>
+            <arg name="init_theta"     value="-90.0"/>
+            <arg name="goal_x"     value="10.0"/>
+            <arg name="goal_y"     value="0.0"/>
+            <arg name="goal_z"     value="0.0"/>
+
+            <arg name="goal_num" value="3"/>
+            <arg name="goal_x_1"     value="12.5"/>
+            <arg name="goal_y_1"     value="-10.0"/>
+            <arg name="goal_z_1"     value="0.0"/>
+
+            <arg name="goal_x_2"     value="12.5"/>
+            <arg name="goal_y_2"     value="5.5"/>
+            <arg name="goal_z_2"     value="0.0"/>
+
+            <arg name="goal_x_3"     value="17.5"/>
+            <arg name="goal_y_3"     value="17.5"/>
+            <arg name="goal_z_3"     value="0.0"/>
+
+            <arg name="map_size_x" value="$(arg map_size_x)"/>
+            <arg name="map_size_y" value="$(arg map_size_y)"/>
+            <arg name="map_size_z" value="$(arg map_size_z)"/>
+            <arg name="odom_topic" value="$(arg odom_topic)"/>
+            <arg name="initial_pos_topic" value="$(arg initial_pos_topic)"/>
+        </include>
+    </group>
+
+    <group ns="car1">
+        <arg name="uav_id" default="-1"/>
+
+        <include file="$(find plan_manage)/launch/kino_car/kino_replan_car.launch">
+            <arg name="uav_id"   value="$(arg uav_id)"/>
+            <arg name="init_x"     value="-12.5"/>
+            <arg name="init_y"     value="-17.5"/>
+            <arg name="init_z"     value="0.0"/>
+            <arg name="init_theta"     value="-90.0"/>
+            <arg name="goal_x"     value="0.0"/>
+            <arg name="goal_y"     value="10.0"/>
+            <arg name="goal_z"     value="0.0"/>
+
+            <arg name="goal_num" value="3"/>
+            <arg name="goal_x_1"     value="-12.5"/>
+            <arg name="goal_y_1"     value="-10.0"/>
+            <arg name="goal_z_1"     value="0.0"/>
+
+            <arg name="goal_x_2"     value="-12.5"/>
+            <arg name="goal_y_2"     value="2.5"/>
+            <arg name="goal_z_2"     value="0.0"/>
+
+            <arg name="goal_x_3"     value="-12.5"/>
+            <arg name="goal_y_3"     value="12.5"/>
+            <arg name="goal_z_3"     value="0.0"/>
+
+            <arg name="map_size_x" value="$(arg map_size_x)"/>
+            <arg name="map_size_y" value="$(arg map_size_y)"/>
+            <arg name="map_size_z" value="$(arg map_size_z)"/>
+            <arg name="odom_topic" value="$(arg odom_topic)"/>
+            <arg name="initial_pos_topic" value="$(arg initial_pos_topic)"/>
+        </include>
+    </group>
+    
+
+    <group ns="uav0">
+        <arg name="uav_id" default="0"/>
+
+        <include file="$(find plan_manage)/launch/kino_replan.launch">
+            <arg name="uav_id"   value="$(arg uav_id)"/>
+            <arg name="init_x"     value="-0.5"/>
+            <arg name="init_y"     value="-19.5"/>
+            <arg name="init_z"     value="0"/>
+            <arg name="map_size_x" value="$(arg map_size_x)"/>
+            <arg name="map_size_y" value="$(arg map_size_y)"/>
+            <arg name="map_size_z" value="$(arg map_size_z)"/>
+            <arg name="odom_topic" value="$(arg odom_topic)"/>
+            <arg name="initial_pos_topic" value="$(arg initial_pos_topic)"/>
+        </include>
+    </group>
+
+    <group ns="uav1">
+        <arg name="uav_id" default="1"/>
+
+        <include file="$(find plan_manage)/launch/kino_replan.launch">
+            <arg name="uav_id"   value="$(arg uav_id)"/>
+            <arg name="init_x"     value="-0.5"/>
+            <arg name="init_y"     value="-24.5"/>
+            <arg name="init_z"     value="0"/>
+            <arg name="map_size_x" value="$(arg map_size_x)"/>
+            <arg name="map_size_y" value="$(arg map_size_y)"/>
+            <arg name="map_size_z" value="$(arg map_size_z)"/>
+            <arg name="odom_topic" value="$(arg odom_topic)"/>
+            <arg name="initial_pos_topic" value="$(arg initial_pos_topic)"/>
+        </include>
+    </group>
+
+    <group ns="uav2">
+        <arg name="uav_id" default="2"/>
+
+        <include file="$(find plan_manage)/launch/kino_replan.launch">
+            <arg name="uav_id"   value="$(arg uav_id)"/>
+            <arg name="init_x"     value="-5.5"/>
+            <arg name="init_y"     value="-19.5"/>
+            <arg name="init_z"     value="0"/>
+            <arg name="map_size_x" value="$(arg map_size_x)"/>
+            <arg name="map_size_y" value="$(arg map_size_y)"/>
+            <arg name="map_size_z" value="$(arg map_size_z)"/>
+            <arg name="odom_topic" value="$(arg odom_topic)"/>
+            <arg name="initial_pos_topic" value="$(arg initial_pos_topic)"/>
+        </include>
+    </group>
+
+    <group ns="uav3">
+        <arg name="uav_id" default="3"/>
+
+        <include file="$(find plan_manage)/launch/kino_replan.launch">
+            <arg name="uav_id"   value="$(arg uav_id)"/>
+            <arg name="init_x"     value="-5.5"/>
+            <arg name="init_y"     value="-24.5"/>
+            <arg name="init_z"     value="0"/>
+            <arg name="map_size_x" value="$(arg map_size_x)"/>
+            <arg name="map_size_y" value="$(arg map_size_y)"/>
+            <arg name="map_size_z" value="$(arg map_size_z)"/>
+            <arg name="odom_topic" value="$(arg odom_topic)"/>
+            <arg name="initial_pos_topic" value="$(arg initial_pos_topic)"/>
+        </include>
+    </group>
+
+    <group ns="uav4">
+        <arg name="uav_id" default="4"/>
+
+        <include file="$(find plan_manage)/launch/kino_replan.launch">
+            <arg name="uav_id"   value="$(arg uav_id)"/>
+            <arg name="init_x"     value="-0.5"/>
+            <arg name="init_y"     value="-14.5"/>
+            <arg name="init_z"     value="0"/>
+            <arg name="map_size_x" value="$(arg map_size_x)"/>
+            <arg name="map_size_y" value="$(arg map_size_y)"/>
+            <arg name="map_size_z" value="$(arg map_size_z)"/>
+            <arg name="odom_topic" value="$(arg odom_topic)"/>
+            <arg name="initial_pos_topic" value="$(arg initial_pos_topic)"/>
+        </include>
+    </group>
+
+    <group ns="uav5">
+        <arg name="uav_id" default="5"/>
+
+        <include file="$(find plan_manage)/launch/kino_replan.launch">
+            <arg name="uav_id"   value="$(arg uav_id)"/>
+            <arg name="init_x"     value="-5.5"/>
+            <arg name="init_y"     value="-14.5"/>
+            <arg name="init_z"     value="0"/>
+            <arg name="map_size_x" value="$(arg map_size_x)"/>
+            <arg name="map_size_y" value="$(arg map_size_y)"/>
+            <arg name="map_size_z" value="$(arg map_size_z)"/>
+            <arg name="odom_topic" value="$(arg odom_topic)"/>
+            <arg name="initial_pos_topic" value="$(arg initial_pos_topic)"/>
+        </include>
+    </group>
+
+    <!-- <group ns="uav6">
+        <arg name="uav_id" default="6"/>
+
+        <include file="$(find plan_manage)/launch/kino_replan.launch">
+            <arg name="uav_id"   value="$(arg uav_id)"/>
+            <arg name="init_x"     value="4"/>
+            <arg name="init_y"     value="10"/>
+            <arg name="init_z"     value="6"/>
+            <arg name="map_size_x" value="$(arg map_size_x)"/>
+            <arg name="map_size_y" value="$(arg map_size_y)"/>
+            <arg name="map_size_z" value="$(arg map_size_z)"/>
+            <arg name="odom_topic" value="$(arg odom_topic)"/>
+            <arg name="initial_pos_topic" value="$(arg initial_pos_topic)"/>
+        </include>
+    </group> -->
+
+    <!-- <group ns="uav7">
+        <arg name="uav_id" default="7"/>
+
+        <include file="$(find plan_manage)/launch/kino_replan.launch">
+            <arg name="uav_id"   value="$(arg uav_id)"/>
+            <arg name="init_x"     value="-0.5"/>
+            <arg name="init_y"     value="-7"/>
+            <arg name="init_z"     value="0"/>
+            <arg name="map_size_x" value="$(arg map_size_x)"/>
+            <arg name="map_size_y" value="$(arg map_size_y)"/>
+            <arg name="map_size_z" value="$(arg map_size_z)"/>
+            <arg name="odom_topic" value="$(arg odom_topic)"/>
+            <arg name="initial_pos_topic" value="$(arg initial_pos_topic)"/>
+        </include>
+    </group>
+
+    <group ns="uav8">
+        <arg name="uav_id" default="8"/>
+
+        <include file="$(find plan_manage)/launch/kino_replan.launch">
+            <arg name="uav_id"   value="$(arg uav_id)"/>
+            <arg name="init_x"     value="-0.5"/>
+            <arg name="init_y"     value="-7"/>
+            <arg name="init_z"     value="0"/>
+            <arg name="map_size_x" value="$(arg map_size_x)"/>
+            <arg name="map_size_y" value="$(arg map_size_y)"/>
+            <arg name="map_size_z" value="$(arg map_size_z)"/>
+            <arg name="odom_topic" value="$(arg odom_topic)"/>
+            <arg name="initial_pos_topic" value="$(arg initial_pos_topic)"/>
+        </include>
+    </group>
+
+    <group ns="uav9">
+        <arg name="uav_id" default="9"/>
+
+        <include file="$(find plan_manage)/launch/kino_replan.launch">
+            <arg name="uav_id"   value="$(arg uav_id)"/>
+            <arg name="init_x"     value="-0.5"/>
+            <arg name="init_y"     value="-7"/>
+            <arg name="init_z"     value="0"/>
+            <arg name="map_size_x" value="$(arg map_size_x)"/>
+            <arg name="map_size_y" value="$(arg map_size_y)"/>
+            <arg name="map_size_z" value="$(arg map_size_z)"/>
+            <arg name="odom_topic" value="$(arg odom_topic)"/>
+            <arg name="initial_pos_topic" value="$(arg initial_pos_topic)"/>
+        </include>
+    </group> -->
+
+</launch>

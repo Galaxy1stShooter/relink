@@ -1,0 +1,41 @@
+<launch>
+
+    <arg name="radius_comm" value="5.0" />
+    <arg name="ball_radius_multiplier" value="1.5" />
+
+    <node pkg="optimizer" name="optimizer" type="optimizer" output="screen">
+        <param name="optimizer/approximation_quality" value="50.0" type="double"/>
+        <param name="optimizer/safe_margin" value="0.5" type="double"/>
+        <param name="optimizer/penalty_weight" value="80000.0" type="double"/>
+        <param name="optimizer/radius_comm" value="$(arg radius_comm)" type="double"/>
+        <param name="optimizer/ball_radius_multiplier" value="$(arg ball_radius_multiplier)" type="double"/>
+        <param name="optimizer/init_x" value="5.0" type="double"/>
+        <param name="optimizer/init_y" value="1.0" type="double"/>
+        <param name="optimizer/init_z" value="2.0" type="double"/>
+        <param name="optimizer/tar_num" value="3" type="int"/>
+    </node>
+
+    <!--启动的节点-->
+    <node pkg="octomap_server" type="octomap_server_node" name="octomap_server"> 
+        <!--栅格分辨率-->
+        <param name="resolution" value="0.1" />
+
+        <!--世界坐标系话题，一般为map-->
+        <param name="frame_id" type="string" value="/world" />
+
+        <param name="sensor_model/max_range" value="1000.0" />
+        <param name="latch" value="true" />
+
+        <!--截取的三维点云范围--> 
+        <param name="pointcloud_max_z" value="0.8" />
+        <param name="pointcloud_min_z" value="-0.5" />
+
+        <param name="ground_filter_angle" value="3.14" />
+
+        <!--订阅的点云消息名称 PointClout2，即上一步发布出来的点云topic--> 
+        <!-- cloud_in是octomap默认的输入话题，做一下映射-->
+        <!-- <remap from="cloud_in" to="/map_generator/global_cloud" /> -->
+        <remap from="cloud_in" to="/map_generator/inflated_global_cloud" />
+    </node>
+
+</launch>

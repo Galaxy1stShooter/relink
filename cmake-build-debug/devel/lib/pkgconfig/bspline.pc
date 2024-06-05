@@ -1,0 +1,8 @@
+prefix=/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/cmake-build-debug/devel
+
+Name: bspline
+Description: Description of bspline
+Version: 0.0.0
+Cflags: -I/home/melodies/SYSU_ROBOT/Communication_Relay/src/communication-relay/Utils/fast_planner/bspline/include
+Libs: -L${prefix}/lib -lbspline
+Requires: 

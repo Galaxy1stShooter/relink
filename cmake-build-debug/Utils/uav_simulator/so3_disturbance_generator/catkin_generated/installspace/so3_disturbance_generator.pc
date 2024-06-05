@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: so3_disturbance_generator
+Description: Description of so3_disturbance_generator
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

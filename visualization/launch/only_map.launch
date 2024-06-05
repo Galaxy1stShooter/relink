@@ -1,0 +1,25 @@
+<launch>
+    <arg name="episode_seq" value="1"/>
+    <param name="/simulation_seq" value="$(arg episode_seq)" type="int"/>
+    <!-- ATTENTION! SYNC these in algorithm.launch visualization.launch map_generator.launch -->
+    <arg name="radius_comm" value="34.0" />
+    <arg name="map_size_x" value="50.0"/>
+    <arg name="map_size_y" value="50.0"/>
+    <arg name="map_size_z" value="5.0"/>
+    <arg name="grid_resolution" value="5.0"/>
+    <!-- ATTENTION! SYNC these in algorithm.launch visualization.launch map_generator.launch -->
+
+    <include file="$(find map_generator)/launch/map_generator.launch">
+        <arg name="use_real_map" value="false"/>
+        <arg name="read_map" value="false"/>
+
+        <arg name="map_size_x_" value="$(arg map_size_x)"/>
+        <arg name="map_size_y_" value="$(arg map_size_y)"/>
+        <arg name="map_size_z_" value="$(arg map_size_z)"/>
+        <arg name="grid_resolution" value="$(arg grid_resolution)"/>
+        <!-- Number of circle and pillar obstacles -->
+        <arg name="c_num" value="0"/>
+        <arg name="p_num" value="10"/>
+    </include>
+
+</launch>

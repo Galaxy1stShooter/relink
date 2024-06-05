@@ -1,0 +1,86 @@
+<launch>
+    <rosparam param="use_sim_time">false</rosparam>
+
+    <!-- ATTENTION! SYNC these in algorithm.launch visualization.launch -->
+    <arg name="radius_comm" value="10.0" />
+    <arg name="map_size_x" value="50.0"/>
+    <arg name="map_size_y" value="50.0"/>
+    <arg name="map_size_z" value="5.0"/>
+    <arg name="grid_resolution" value="5.0"/>
+    <!-- ATTENTION! SYNC these in algorithm.launch visualization.launch -->
+    <arg name="inflated_global_map" value="/map_generator/global_cloud"/>
+    <arg name="ball_radius_multiplier" value="30.0" />
+
+    <node pkg="optimizer" name="algorithm" type="algorithm" output="screen">
+        <param name="radius_comm" value="$(arg radius_comm)" type="double"/>
+
+        <param name="graph_constructor/x_size" value="$(arg map_size_x)" type="double"/>
+        <param name="graph_constructor/y_size" value="$(arg map_size_y)" type="double"/>
+        <param name="graph_constructor/z_size" value="$(arg map_size_z)" type="double"/>
+        <param name="grid_map/resolution" value="$(arg grid_resolution)" type="double"/>
+        <!-- <param name="grid_map/radius2res" value="4.0" type="double"/> -->
+
+        <!--  Grid map parameters for LoS checker  -->
+        <param name="los_checker/resolution" value="0.5" type="double"/>
+        <param name="los_checker/x_size" value="$(arg map_size_x)" type="double"/>
+        <param name="los_checker/y_size" value="$(arg map_size_y)" type="double"/>
+        <param name="los_checker/z_size" value="$(arg map_size_z)" type="double"/>
+        <remap from="/global_map" to="$(arg inflated_global_map)"/>
+        <!--  Grid map parameters for LoS checker  -->
+
+        <param name="optimizer/ball_radius" value="$(arg radius_comm)" type="double"/>
+        <param name="optimizer/ball_radius_multiplier" value="$(arg ball_radius_multiplier)" type="double"/>
+        <param name="optimizer/approximation_quality" value="10.0" type="double"/>
+        <param name="optimizer/safe_margin" value="-0.2" type="double"/>
+        <param name="optimizer/penalty_weight" value="800.0" type="double"/>
+        <param name="optimizer/height_min" value="0.5" type="double"/>
+        <param name="optimizer/k_energy" value="0.3" type="double"/>
+        <param name="optimizer/k_comm" value="1.0" type="double"/>
+        <param name="optimizer/k_goal" value="6.8" type="double"/>
+
+        <remap from="~target_pos" to="target_pos"/>
+        <remap from="~target_waypoint" to="target_waypoint"/>
+        <remap from="~uav_pos" to="uav_pos"/>
+        <remap from="~bs_pos" to="bs_pos"/>
+        <remap from="~solution" to="solution"/>
+        <!--Determine parameters of star convex calculation and visualization-->
+        <!--The radius of ball flipping = radius_comm * ball_radius_multiplier-->
+        <param name="ball_radius_multiplier" value="$(arg ball_radius_multiplier)" type="double"/>
+        <!--The count of sampled augmented points = r^2 * augment_multiplier-->
+        <param name="augment_multiplier" value="0.5" type="double"/>
+        <!--If true, visualize the flipped convex hull, not scp-->
+        <param name="show_flipped_hull" value="false" type="bool"/>
+        <!--The voxel size used for pcl down-sampling, of metre-->
+        <param name="down_sampling_size" value="0.5" type="double"/>
+    </node>
+
+    <include file="$(find simulator)/launch/episode_controller.launch">
+        <arg name="inflated_global_map" value="$(arg inflated_global_map)"/>
+    </include>
+
+    <include file="$(find simulator)/launch/entity_controller.launch">
+        <arg name="inflated_global_map" value="$(arg inflated_global_map)"/>
+        <arg name="target_number" value="2"/>
+    </include>
+
+    <!-- <include file="$(find simulator)/launch/measurement.launch">
+        <arg name="inflated_global_map" value="$(arg inflated_global_map)"/>
+    </include> -->
+
+</launch>
+
+    <!-- <include file="$(find map_generator)/launch/map_generator.launch">
+        <arg name="map_size_x_" value="$(arg map_size_x)"/>
+        <arg name="map_size_y_" value="$(arg map_size_y)"/>
+        <arg name="map_size_z_" value="$(arg map_size_z)"/>
+        <arg name="grid_resolution" value="$(arg grid_resolution)"/>
+        <arg name="c_num" value="0"/>
+        <arg name="p_num" value="5"/>
+    </include>
+
+    <include file="$(find visualization)/launch/visualization.launch">
+        <arg name="radius_comm" value="$(arg radius_comm)"/>
+        <arg name="map_size_x" value="$(arg map_size_x)"/>
+        <arg name="map_size_y" value="$(arg map_size_y)"/>
+        <arg name="map_size_z" value="$(arg map_size_z)"/>
+    </include> -->
